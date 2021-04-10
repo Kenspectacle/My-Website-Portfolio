@@ -33,6 +33,14 @@ app.get('/home', (req,res) => {
     res.render('home');
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects');
+});
+
+app.all('*', (req, res) => {
+    res.render('notfound');
+});
+
 app.listen(3000, () => {
     console.log('CONNECTION AT PORT 3000 OPEN');
 });
